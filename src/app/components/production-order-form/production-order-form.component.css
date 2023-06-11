@@ -1,0 +1,19 @@
+.icon-display {
+  transform: scale(0.8);
+}
+
+.mat-form-field-icon-display {
+  height: 0.2rem;
+  width: 95%;
+}
+
+.mat-form-field-dimensions{
+  width: 95%;
+}
+
+input{
+  height:2rem;
+}
+
+
+

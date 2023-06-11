@@ -1,0 +1,38 @@
+<div *ngIf="mode=='form'">
+    <mat-form-field
+      appearance="outline"
+      class="form-field mat-form-field-dimensions mx-3"
+    >
+      <mat-label>{{label}}</mat-label>
+      <div style="display: flex">
+        <input [formControl]="c" #input (blur)="onChange($event, input.value)" matInput class="mx-3"/>
+        <div class="mx-2">
+          <button
+            type="button"
+            class="material-icons-sharp"
+            style="background: none"
+            (click)="openDialogForm(this.mode,this.fieldId, this.dialogTitle)"
+          >
+            qr_code
+          </button>
+        </div>
+      </div>
+      <mat-error *ngIf="c.hasError('required')">This field is required</mat-error>
+    </mat-form-field>
+</div>
+
+<div *ngIf="mode=='generic'">
+      <div style="display: flex">
+        <input #input class="generic-styling mx-3"/>
+        <div class="mx-2">
+          <button
+            type="button"
+            class="material-icons-sharp"
+            style="background: none"
+            (click)="openDialog(this.mode)"
+          >
+            qr_code
+          </button>
+        </div>
+    </div>
+</div>

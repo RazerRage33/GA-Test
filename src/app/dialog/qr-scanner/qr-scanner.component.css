@@ -1,0 +1,26 @@
+#video-overlays {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+}
+#video-box {
+  position: relative;
+}
+
+video {
+  border: solid 0.2rem;
+  border-color: grey;
+  border-radius: 0.2rem;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+}
+
+.dialog-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,55 @@
+<div class="wrapper">
+  <aside>
+    <div class="top">
+      <div class="close" (click)="closeMenu()">
+        <span class="material-icons-sharp"> close </span>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <ng-container *ngFor="let menu of menus">
+        <a routerLink="{{ menu.link }}" routerLinkActive="active">
+          <span class="material-icons-sharp"> {{ menu.icon }}</span>
+          <h3>{{ menu.name }}</h3>
+        </a>
+      </ng-container>
+
+      <div class="mt-auto">
+        <!-- to space out the buttons -->
+      </div>
+
+      <!-- every user type have profile and logout menu -->
+      <a routerLink="{{ routes.PROFILE }}" routerLinkActive="active">
+        <span class="material-icons-sharp"> person_outline</span>
+        <h3>Profile</h3>
+      </a>
+
+      <a routerLink="{{ routes.LOGIN }}">
+        <span class="material-icons-sharp"> logout</span>
+        <h3>Log out</h3>
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <router-outlet> </router-outlet>
+  </main>
+</div>
+
+<div class="nav-bar">
+  <div class="top" id="navbar">
+    <button (click)="openMenu()">
+      <span class="material-icons-sharp">menu</span>
+    </button>
+    <div class="theme-toggler"></div>
+    <div class="profile">
+      <div class="info">
+        <p>Hey, <b>bobinson</b></p>
+        <small class="text-muted">Admin</small>
+      </div>
+      <div class="profile-photo">
+        <img src="assets\images\astrio.png" />
+      </div>
+    </div>
+  </div>
+</div>

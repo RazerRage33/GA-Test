@@ -1,0 +1,1005 @@
+<div id="languageDropdown" style="float:right" class="mx-12 mt-4">
+    <mat-form-field>
+    <mat-select [(ngModel)]="selectedLanguage">
+        <mat-option *ngFor="let language of languages" [value]="language.value">
+            {{language.label}}
+          </mat-option>
+    </mat-select>
+    </mat-form-field>
+  </div>
+<div class="print my-4 mx-4">
+    <div>
+        <!-- Header -->
+        <table style="width:98%;">
+            <colgroup>
+                <col span="1" style="width: 10%;">
+                <col span="1" style="width: 65%;">
+                <col span="1" style="width: 25%;">
+            </colgroup>
+            <tr>
+                <th colspan="1" style="float:right"><span class=>
+                        <div style="max-width:35px">
+                            <img src="assets/images/logo.jpg" alt="Banshing">
+                        </div>
+                    </span></th>
+                <th colspan="1"><span class="report-field">
+                        <h2>BANSHING INDUSTRIAL CO. PTE LTD</h2>
+                    </span></th>
+                <th colspan="1">
+                    <div style="float:right;">
+                        <span style="font-weight:bold;">Control No :
+                        </span><span>{{mouldParametersRecord.controlNumber}}</span>
+                    </div>
+                </th>
+            </tr>
+        </table>
+        <div>
+            <h4 class="centralize-text">MOULDING PARAMETERS RECORD</h4>
+        </div>
+    </div>
+
+    <!-- Report Info -->
+    <div class="mt-2 mx-4">
+        <table style="width:98%;">
+            <colgroup>
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+
+            </colgroup>
+            <tr>
+                <th colspan="8"><span class="report-header">{{this[selectedLanguage].customer}} :</span></th>
+                <td colspan="12" class="report-field-underline"><span
+                        class="report-field">{{mouldParametersRecord.customer}}</span></td>
+                <th colspan="8"><span class="report-header">{{this[selectedLanguage].date}} :</span></th>
+                <td colspan="12" class="report-field-underline"><span
+                        class="report-field">{{mouldParametersRecord.date}}</span></td>
+            </tr>
+            <tr>
+                <th colspan="8"><span class="report-header">{{this[selectedLanguage].partName}} :</span></th>
+                <td colspan="12" class="report-field-underline"><span
+                        class="report-field">{{mouldParametersRecord.partName}}</span></td>
+                <th colspan="8"><span class="report-header">{{this[selectedLanguage].shotWeight}} :</span></th>
+                <td colspan="12" class="report-field-underline"><span
+                        class="report-field">{{mouldParametersRecord.shotWeight}}g</span></td>
+            </tr>
+            <tr>
+                <th colspan="8"><span class="report-header">{{this[selectedLanguage].partNumber}} :</span></th>
+                <td colspan="12" class="report-field-underline"><span
+                        class="report-field">{{mouldParametersRecord.partNumber}}</span></td>
+                <th colspan="8"><span class="report-header">{{this[selectedLanguage].partWeight}} :</span></th>
+                <td colspan="12" class="report-field-underline"><span
+                        class="report-field">{{mouldParametersRecord.partWeight}}g</span></td>
+            </tr>
+            <tr>
+                <th colspan="8"><span class="report-header">{{this[selectedLanguage].numberOfCavity}} : </span></th>
+                <td colspan="12" class="report-field-underline"><span
+                        class="report-field">{{mouldParametersRecord.numberOfCavity}}</span></td>
+                <th colspan="8"><span class="report-header">{{this[selectedLanguage].materialGrade}} :</span></th>
+                <td colspan="12" class="report-field-underline"><span
+                        class="report-field">{{mouldParametersRecord.matertialGrade}}</span></td>
+            </tr>
+            <tr>
+                <th colspan="8"><span class="report-header">{{this[selectedLanguage].mcNumber}} :</span></th>
+                <td colspan="4" class="report-field-underline"><span
+                        class="report-field">{{mouldParametersRecord.mcNumber}}</span></td>
+                <th colspan="4"><span class="report-header">{{this[selectedLanguage].tonnage}} :</span></th>
+                <td colspan="4" class="report-field-underline"><span
+                        class="report-field">{{mouldParametersRecord.tonnage}}</span></td>
+                <th colspan="8"><span class="report-header">{{this[selectedLanguage].moldNumber}} :</span></th>
+                <td colspan="12" class="report-field-underline"><span
+                        class="report-field">{{mouldParametersRecord.mouldNumber}}</span></td>
+            </tr>
+        </table>
+    </div>
+    <!-- Checklist Flow -->
+    <div class="mt-3">
+        <span style="font-weight:bold">CHECKLIST FLOW:</span>
+        <table class="mt-2"style="width:98%;">
+            <colgroup>
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+            </colgroup>
+            <tr>
+                <td colspan="1"></td>
+                <td class="report-table-td" style="border-bottom: none;" colspan="8"><span class="checklist-flow-span">Hopper Temperature</span></td>
+                <td colspan="2" rowspan="2"><img style="height: 35px; width: 35px;" src="assets/images/ok-arrow-right.png" alt="->"></td>
+                <td class="report-table-td" style="border-bottom: none;" colspan="8"><span class="checklist-flow-span">Barrel Heater Temperature</span></td>
+                <td colspan="2" rowspan="2"><img style="height: 35px; width: 35px;" src="assets/images/ok-arrow-right.png" alt="->"></td>
+                <td class="report-table-td" style="border-bottom: none;" colspan="8"><span class="checklist-flow-span">Mold Temp Controller</span></td>
+                <td colspan="2" rowspan="2"><img style="height: 35px; width: 35px;" src="assets/images/ok-arrow-right.png" alt="->"></td>
+                <td class="report-table-td" style="border-bottom: none;" colspan="8"><span class="checklist-flow-span">Cooling Lines Water Flow </span></td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td class="report-table-td" style="border-top: none;" colspan="8"><span class="checklist-flow-span">料桶 溫度</span></td>
+                <td class="report-table-td" style="border-top: none;" colspan="8"><span class="checklist-flow-span">加 热筒 溫度</span></td>
+                <td class="report-table-td" style="border-top: none;" colspan="8"><span class="checklist-flow-span">模具温度控制器</span></td>
+                <td class="report-table-td" style="border-top: none;" colspan="8"><span class="checklist-flow-span">冷却通道的水流量</span></td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td colspan="8"></td>
+                <td colspan="2"></td>
+                <td colspan="8"></td>
+                <td colspan="2" ></td>
+                <td colspan="8"></td>
+                <td colspan="2"></td>
+                <td colspan="3"></td>
+                <td colspan="2"><img src="assets/images/ok-arrow-down.png" alt="|"></td>
+                <td colspan="3"></td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td class="report-table-td" style="border-bottom: none;" colspan="8"><span class="checklist-flow-span">Start Adjustment then Update changes</span></td>
+                <td colspan="2" rowspan="2"><img style="height: 35px; width: 35px;" src="assets/images/ok-arrow-left.png" alt="->"></td>
+                <td class="report-table-td" style="border-bottom: none;" colspan="8"><span class="checklist-flow-span">Back Pressure</span></td>
+                <td colspan="2" rowspan="2"><img style="height: 35px; width: 35px;" src="assets/images/ok-arrow-left.png" alt="->"></td>
+                <td class="report-table-td" style="border-bottom: none;" colspan="8"><span class="checklist-flow-span">Robot Set-up & Function</span></td>
+                <td colspan="2" rowspan="2"><img style="height: 35px; width: 35px;" src="assets/images/ok-arrow-left.png" alt="->"></td>
+                <td class="report-table-td" style="border-bottom: none;" colspan="8"><span class="checklist-flow-span">Mold Cavity & Core Surface</span></td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <td colspan="1"></td>
+                <td class="report-table-td" style="border-top: none;" colspan="8"><span class="checklist-flow-span">开始调机然后更新变化</span></td>
+                <td class="report-table-td" style="border-top: none;" colspan="8"><span class="checklist-flow-span">背压</span></td>
+                <td class="report-table-td" style="border-top: none;" colspan="8"><span class="checklist-flow-span">机器手的设置与功能</span></td>
+                <td class="report-table-td" style="border-top: none;" colspan="8"><span class="checklist-flow-span">模具型腔和型芯表面</span></td>
+                <td colspan="1"></td>
+            </tr>
+
+        </table>
+    </div>
+    <!-- Report Table Info -->
+    <div class="mt-4">
+        <span style="font-weight:bold">(% Barrel Used can be less than 25% provided Residence time Pass.)</span>
+        <table class="report-table" style="width: 98%;" cellspacing="0" cellpadding="0">
+            <colgroup>
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+                <col width="2.5%">
+
+            </colgroup>
+            <tr>
+                <th class="report-table-th" colspan="16"><span style="float:left">Residence Time must be less than 6
+                        mins</span></th>
+                <th class="report-table-th" colspan="4" rowspan="2"><span>{{this[selectedLanguage].masterParameter}}</span></th>
+                <th class="report-table-th" colspan="4"><span>Set-up</span></th>
+                <th class="report-table-th" colspan="4"><span>Set-up</span></th>
+                <th class="report-table-th" colspan="4"><span>Set-up</span></th>
+                <th class="report-table-th" colspan="4"><span>Set-up</span></th>
+                <th class="report-table-th" colspan="4"><span>Set-up</span></th>
+            </tr>
+            <tr>
+                <th class="report-table-th" colspan="16"><span style="float:left">% Barrel Used should be 25% ~
+                        65%</span></th>
+                <th class="report-table-th" colspan="4"><span>Adjustment</span></th>
+                <th class="report-table-th" colspan="4"><span>Adjustment</span></th>
+                <th class="report-table-th" colspan="4"><span>Adjustment</span></th>
+                <th class="report-table-th" colspan="4"><span>Adjustment</span></th>
+                <th class="report-table-th" colspan="4"><span>Adjustment</span></th>
+            </tr>
+            <!-- Temperature -->
+            <tr>
+                <th class="report-table-th" colspan="12"><span style="float:left;">{{this[selectedLanguage].temperature}}</span></th>
+                <th class="report-table-th" colspan="4"><span>{{this[selectedLanguage].date}}</span></th>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <th class="report-table-th" colspan="8"><span style="float:left"></span></th>
+                <th class="report-table-th" colspan="4"><span> + / -</span></th>
+                <th class="report-table-th" colspan="2"><span>{{this[selectedLanguage].min}}</span></th>
+                <th class="report-table-th" colspan="2"><span>{{this[selectedLanguage].max}}</span></th>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].predryingTime}}</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].hopper}}</span></td>
+                <td class="report-table-td" colspan="4"><span>5°c</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].nozzle}}</span></td>
+                <td class="report-table-td" colspan="4"><span>10°c</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].head}}</span></td>
+                <td class="report-table-td" colspan="4"><span>10°c</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].front}}</span></td>
+                <td class="report-table-td" colspan="4"><span>10°c</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].middle}}</span></td>
+                <td class="report-table-td" colspan="4"><span>10°c</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].rear}}</span></td>
+                <td class="report-table-td" colspan="4"><span>10°c</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].meltTemperature}}</span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="4"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="4"><span class="input-data"></span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8" rowspan="2"><span style="float:left">{{this[selectedLanguage].slider}}</span></td>
+                <td class="report-table-td" colspan="4" rowspan="2"><span>10°c</span></td>
+                <td class="report-table-td" colspan="2" rowspan="2"><span>INPUT</span></td>
+                <td class="report-table-td" colspan="2" rowspan="2"><span>INPUT</span></td>
+                <td class="report-table-td" colspan="2" rowspan="2"><span>n/a</span></td>
+                <td class="report-table-td" colspan="1"><span>SET</span></td>
+                <td class="report-table-td" colspan="1"><span>n/a</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="1"><span>ACT</span></td>
+                <td class="report-table-td" colspan="1"><span>n/a</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8" rowspan="2"><span style="float:left">{{this[selectedLanguage].mouldCavity}}</span></td>
+                <td class="report-table-td" colspan="4" rowspan="2"><span>10°c</span></td>
+                <td class="report-table-td" colspan="2" rowspan="2"><span>-5</span></td>
+                <td class="report-table-td" colspan="2" rowspan="2"><span>5</span></td>
+                <td class="report-table-td" colspan="2" rowspan="2"><span>HOT OIL</span></td>
+                <td class="report-table-td" colspan="1"><span>SET</span></td>
+                <td class="report-table-td" colspan="1"><span>n/a</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="1"><span>ACT</span></td>
+                <td class="report-table-td" colspan="1"><span>n/a</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8" rowspan="2"><span style="float:left">{{this[selectedLanguage].MouldCore}}</span></td>
+                <td class="report-table-td" colspan="4" rowspan="2"><span>10°c</span></td>
+                <td class="report-table-td" colspan="2" rowspan="2"><span>-5</span></td>
+                <td class="report-table-td" colspan="2" rowspan="2"><span>5</span></td>
+                <td class="report-table-td" colspan="2" rowspan="2"><span>HOT OIL</span></td>
+                <td class="report-table-td" colspan="1"><span>SET</span></td>
+                <td class="report-table-td" colspan="1"><span>n/a</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>SET</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr class="report-end-section">
+                <td class="report-table-td" colspan="1"><span>ACT</span></td>
+                <td class="report-table-td" colspan="1"><span>n/a</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span>ACT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <!-- Pressure -->
+            <tr class="report-end-section">
+                <th class="report-table-th" colspan="8"><span style="float:left">{{this[selectedLanguage].pressure}}</span></th>
+                <th class="report-table-th" colspan="4"><span>+ / -</span></th>
+                <th class="report-table-th" colspan="2"><span>{{this[selectedLanguage].min}}</span></th>
+                <th class="report-table-th" colspan="2"><span>{{this[selectedLanguage].max}}</span></th>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].pressureFirstInjection}}</span></td>
+                <td class="report-table-td" colspan="4"><span>10%</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].pressureSecondInjection}}</span></td>
+                <td class="report-table-td" colspan="4"><span>10%</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].pressureThirdInjection}}</span></td>
+                <td class="report-table-td" colspan="4"><span>10%</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].pressureFourthInjection}}</span></td>
+                <td class="report-table-td" colspan="4"><span>10%</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].pressureFifthInjection}}</span></td>
+                <td class="report-table-td" colspan="4"><span>10%</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].pressureSixthInjection}}</span></td>
+                <td class="report-table-td" colspan="4"><span>10%</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].fillPeakPressure}}</span>
+                </td>
+                <td class="report-table-td dark-grey-background-fill" colspan="4"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="4"><span class="input-data"></span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].screwBackPressure}}</span></td>
+                <td class="report-table-td" colspan="4"><span>10%</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr class="report-end-section">
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].mouldClamp}}</span></td>
+                <td class="report-table-td black-background-fill" colspan="4"><span class="input-data"></span></td>
+                <td class="report-table-td black-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td black-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <!-- Time -->
+            <tr class="report-end-section">
+                <th class="report-table-th" colspan="8"><span style="float:left">{{this[selectedLanguage].timer}}</span></th>
+                <th class="report-table-th" colspan="4"><span>+ / -</span></th>
+                <th class="report-table-th" colspan="2"><span>{{this[selectedLanguage].min}}</span></th>
+                <th class="report-table-th" colspan="2"><span>{{this[selectedLanguage].max}}</span></th>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].timerInjection}}</span></td>
+                <td class="report-table-td" colspan="4"><span>1.0sec</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].holdingTp1}}</span></td>
+                <td class="report-table-td" colspan="4"><span>1.0sec</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].holdingTp2}}</span></td>
+                <td class="report-table-td" colspan="4"><span>1.0sec</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].injectionDelay}}</span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="4"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="4"><span class="input-data"></span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].fillTime}}</span></td>
+                <td class="report-table-td" colspan="4"><span>0.3sec</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="4"><span class="input-data"></span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].meteringTime}}</span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="4"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="4"><span class="input-data"></span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].curing}}</span></td>
+                <td class="report-table-td" colspan="4"><span>5.0sec</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].totalCycle}}</span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="4"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="4"><span class="input-data"></span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT DATA</span></td>
+            <tr class="report-end-section">
+                <!-- Injection speed and stroke position -->
+            <tr>
+                <th class="report-table-th" colspan="16"><span style="float:left">{{this[selectedLanguage].injectionSpeed}}</span></th>
+            </tr>
+            <tr>
+                <th class="report-table-th" colspan="8"><span style="float:left"></span></th>
+                <th class="report-table-th" colspan="4"><span>{{this[selectedLanguage].v}} +/- 20% </span></th>
+                <th class="report-table-th" colspan="4"><span>{{this[selectedLanguage].s}} +/- 3mm </span></th>
+                <th class="report-table-th" colspan="2" rowspan="2"><span>{{this[selectedLanguage].v}} (%) (mm/s)</span></th>
+                <th class="report-table-th" colspan="2" rowspan="2"><span>{{this[selectedLanguage].s}} (mm)</span></th>
+                <th class="report-table-th" colspan="2" rowspan="2"><span>{{this[selectedLanguage].v}} (%) (mm/s)</span></th>
+                <th class="report-table-th" colspan="2" rowspan="2"><span>{{this[selectedLanguage].s}} (mm)</span></th>
+                <th class="report-table-th" colspan="2" rowspan="2"><span>{{this[selectedLanguage].v}}(%) (mm/s)</span></th>
+                <th class="report-table-th" colspan="2" rowspan="2"><span>{{this[selectedLanguage].s}} (mm)</span></th>
+                <th class="report-table-th" colspan="2" rowspan="2"><span>{{this[selectedLanguage].v}} (%) (mm/s)</span></th>
+                <th class="report-table-th" colspan="2" rowspan="2"><span>{{this[selectedLanguage].s}} (mm)</span></th>
+                <th class="report-table-th" colspan="2" rowspan="2"><span>{{this[selectedLanguage].v}} (%) (mm/s)</span></th>
+                <th class="report-table-th" colspan="2" rowspan="2"><span>{{this[selectedLanguage].s}} (mm)</span></th>
+                <th class="report-table-th" colspan="2" rowspan="2"><span>{{this[selectedLanguage].v}} (%) (mm/s)</span></th>
+                <th class="report-table-th" colspan="2" rowspan="2"><span>{{this[selectedLanguage].s}} (mm)</span></th>
+            </tr>
+            <tr class="report-end-section">
+                <th class="report-table-th" colspan="8"><span style="float:left"></span></th>
+                <th class="report-table-th" colspan="2"><span>{{this[selectedLanguage].min}}</span></th>
+                <th class="report-table-th" colspan="2"><span> {{this[selectedLanguage].max}}</span></th>
+                <th class="report-table-th" colspan="2"><span>{{this[selectedLanguage].min}}</span></th>
+                <th class="report-table-th" colspan="2"><span> {{this[selectedLanguage].max}}</span></th>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].InjectionSpeedFirstInjection}}</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].InjectionSpeedSecondInjection}}</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].InjectionSpeedThirdInjection}}</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].InjectionSpeedFourthInjection}}</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].InjectionSpeedFifthInjection}}</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].holdingVelocity}}</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td black-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td black-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td black-background-fill" colspan="2"><span class="input-data"></span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            <tr class="report-end-section">
+                <!-- Screw rev-->
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].screwRev}}</span></td>
+                <td class="report-table-td" colspan="4"><span>15%</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].shotSize}}</span></td>
+                <td class="report-table-td" colspan="4"><span>mm</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].cushion}}</span></td>
+                <td class="report-table-td" colspan="4"><span>mm</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td dark-grey-background-fill" colspan="4"><span class="input-data"></span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr>
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].suckBack}}</span></td>
+                <td class="report-table-td" colspan="4"><span>mm</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr class="report-end-section">
+                <td class="report-table-td" colspan="8"><span style="float:left">{{this[selectedLanguage].vPCHGPOS}}</span></td>
+                <td class="report-table-td" colspan="4"><span>mm</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="4"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+                <td class="report-table-td" colspan="2"><span class="input-data">INPUT</span></td>
+            </tr>
+            <tr class="report-end-section">
+                <td class="report-table-td" colspan="8"><span style="float:left"></span></td>
+                <th class="report-table-th" colspan="8"><span>ISSUED BY:</span></th>
+                <th class="report-table-th" colspan="4"><span class="input-data">INPUT</span></th>
+                <th class="report-table-th black-background-fill" colspan="20"></th>
+            </tr>
+            <!--Mould Cooling Circtui-->
+            <tr class="report-end-section">
+                <td class="report-table-td" colspan="20"><img src="assets/images/MouldCoolingCircuit.png"
+                        alt="MouldCoolingCircuit"></td>
+                <td class="report-table-td" colspan="4"></td>
+                <td class="report-table-td" colspan="4"></td>
+                <td class="report-table-td" colspan="4"></td>
+                <td class="report-table-td" colspan="4"></td>
+                <td class="report-table-td" colspan="4"></td>
+            </tr>
+            <tr>
+                <th class="report-table-th" colspan="16">
+                    <span style="float:left">Note :The Production In Charge in every adjustment must recorded
+                        and reviewed by the Supervisor.</span>
+                </th>
+                <th class="report-table-th" colspan="4"><span>{{this[selectedLanguage].adjustedBy}}</span></th>
+                <td class="report-table-td" colspan="4"><span></span></td>
+                <td class="report-table-td" colspan="4"><span></span></td>
+                <td class="report-table-td" colspan="4"><span></span></td>
+                <td class="report-table-td" colspan="4"><span></span></td>
+                <td class="report-table-td" colspan="4"><span></span></td>
+            </tr>
+            <tr>
+                <th class="report-table-th" colspan="16">
+                    <span style="float:left">LEGEND:( ) No Change n/a -Not Applicable ( * ) Actual Value</span>
+                </th>
+                <th class="report-table-th" colspan="4"><span>{{this[selectedLanguage].productionSupervisor}}</span></th>
+                <td class="report-table-td" colspan="4"><span></span></td>
+                <td class="report-table-td" colspan="4"><span></span></td>
+                <td class="report-table-td" colspan="4"><span></span></td>
+                <td class="report-table-td" colspan="4"><span></span></td>
+                <td class="report-table-td" colspan="4"><span></span></td>
+            </tr>
+        </table>
+        <span>BI_F_PRO_25 - Rev 07; Author : Anthony ; Effective : 06/02/2021</span>
+    </div>
+</div>

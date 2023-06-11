@@ -1,0 +1,83 @@
+<head>
+  <!-- Bootstrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous"
+  />
+  <!-- Bootstrap Font Icon CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+  />
+</head>
+<div mat-dialog-title class="dialog-title">
+  <h2 *ngIf="data.ItemTitle">QR Scanning For {{ data.ItemTitle }}</h2>
+  <h2 *ngIf="!data.ItemTitle">QR Scanning</h2>
+  <button mat-icon-button aria-label="close dialog" mat-dialog-close>
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<!-- Fallback for iOS PWA -->
+<input
+  #fileinput
+  type="file"
+  accept="image/*;capture=camera"
+  hidden
+  (change)="handleFile($event)"
+/>
+<div id="video-box">
+  <div id="video-overlays">
+    <div class="container-fluid">
+      <div class="row mx-auto">
+        <div class="col text-center">
+          <!-- Trigger the file input -->
+          <button
+            type="button"
+            class="btn btn-primary btn-lg w-50 mt-2 mb-2"
+            (click)="captureImage()"
+          >
+            <i class="bi bi-upload"></i>
+            <span> Upload Image</span>
+          </button>
+          <br />
+          <!-- Initiate Scanning -->
+          <button
+            type="button"
+            class="btn btn-primary btn-lg w-50 mt-2 mb-2"
+            (click)="startScan()"
+            *ngIf="!scanActive"
+          >
+            Start scan
+          </button>
+        </div>
+      </div>
+      <div class="row mx-auto">
+        <div class="col text-center">
+          <button
+            type="button"
+            class="btn btn-danger btn-lg w-50 mt-2 mb-2"
+            (click)="stopScan()"
+            *ngIf="scanActive"
+          >
+            Stop scan
+          </button>
+        </div>
+      </div>
+      <div class="row mx-auto">
+        <div class="col text-center">
+          <h1 style="text-align: center" *ngIf="scanResult">
+            Result: {{ scanResult }}
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="display: flex; justify-content: center">
+    <!-- Shows camera stream -->
+    <video #video [hidden]="!scanActive" width="55%"></video>
+  </div>
+</div>
+<!-- Used to render the camera stream images -->
+<canvas #canvas hidden></canvas>

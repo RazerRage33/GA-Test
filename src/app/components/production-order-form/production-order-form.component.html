@@ -1,0 +1,55 @@
+<div class="mx-3 mt-3">
+  <div class="row">
+    <div class="col mx-3">
+      <h1>Production Order Form</h1>
+    </div>
+    <div class="col mx-10 mt-2">
+    <app-qr-input mode="generic" class="float-end"></app-qr-input>
+    </div>
+  </div>
+</div>
+<div class="mx-3">
+  
+  <form [formGroup]="formData" (ngSubmit)="onSubmit()">
+    <app-qr-input formControlName="productionOrderNumber" mode="form" [c]="formData.controls.productionOrderNumber" label="Production Order Number: " fieldId="productionOrderNumber" dialogTitle="Production Order Number"></app-qr-input>
+    <br>
+  <br>
+    <div>
+      <mat-form-field
+        appearance="outline"
+        class="form-field mat-form-field-dimensions mx-3"
+      >
+        <mat-label>Designated Machine ID:</mat-label>
+        <div style="display: flex">
+          <input matInput formControlName="designatedMachineId" class="mx-3"/>
+        </div>
+        <mat-error *ngIf="formData.get('designatedMachineId').hasError('required')">This field is required</mat-error>
+      </mat-form-field>
+    </div>
+    <app-qr-input formControlName="actualMachineId" mode="form" [c]="formData.controls.actualMachineId" label="Actual Machine ID: " fieldId="actualMachineId" dialogTitle="Actual Machine ID"></app-qr-input>
+    <br>
+    <br>
+    <div>
+      <mat-form-field
+        appearance="outline"
+        class="form-field mat-form-field-dimensions mx-3"
+      >
+        <mat-label>Designated Mould ID:</mat-label>
+        <div style="display: flex">
+          <input matInput formControlName="designatedMouldId" class="mx-3"/>
+        </div>
+        <mat-error *ngIf="formData.get('designatedMouldId').hasError('required')">This field is required</mat-error>
+      </mat-form-field>
+    </div>
+    <app-qr-input formControlName="actualMouldId" mode="form" [c]="formData.controls.actualMouldId" label="Actual Mould ID: " fieldId="actualMouldId" dialogTitle="Actual Mould ID"></app-qr-input>
+    <div style="display: flex; justify-content: center">
+      <button
+        class="btn btn-primary btn-lg mt-3 mb-3"
+        type="button"
+        (click)="onSubmit()"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

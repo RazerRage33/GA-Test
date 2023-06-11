@@ -1,0 +1,108 @@
+td,
+th {
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.centralize-text {
+    text-align: center;
+}
+
+/* Used for ease of visualising during designing*/
+/*table,
+th,
+td {
+    border: 1px solid black;
+}*/
+.report-field-underline {
+    border-bottom: 1px solid #000;
+}
+
+.report-field {
+    float: left;
+}
+
+.report-header {
+    float: right;
+    font-weight: bold;
+}
+
+.report-table,
+.report-table-th,
+.report-table-td {
+    border: 1px solid black;
+}
+
+.report-table-th {
+    font-weight: bold;
+}
+
+.report-end-section {
+    border-bottom: 2px solid #000;
+}
+
+/*Styling to indicated input field. Remove during actual use*/
+.input-data {
+    color: red;
+}
+
+
+.dark-grey-background-fill {
+    background-color: #a2a2a2 !important;
+}
+
+.black-background-fill {
+    background-color: #000000 !important;
+}
+
+span {
+    font-size: .9rem;
+    padding: 0;
+    margin: 0;
+}
+
+.checklist-flow-span {
+    font-size: .8rem;
+}
+@media print {
+    table {
+        page-break-after: auto
+    }
+
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto
+    }
+
+    td {
+        page-break-inside: avoid;
+        page-break-after: auto
+    }
+
+    thead {
+        display: table-header-group
+    }
+
+    tfoot {
+        display: table-footer-group
+    }
+
+    span {
+        font-size: .4rem;
+    }
+    .checklist-flow-span {
+        font-size: .4rem;
+    }
+
+    .print {
+        width: 7in;
+    }
+
+    div {
+        print-color-adjust: exact;
+    }
+    #languageDropdown {
+        display: none;
+      }
+
+}
